@@ -1,0 +1,49 @@
+import 'package:flutter/material.dart';
+
+class TabletHome extends StatelessWidget {
+  const TabletHome({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('Tablet View'),
+      ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
+              children: [
+                Container(
+                  color: Colors.red,
+                  width: MediaQuery.of(context).size.width/3,
+                  height: MediaQuery.of(context).size.width/3,
+                ),
+                Container(
+                  color: Colors.purple,
+                  width: MediaQuery.of(context).size.width/3,
+                  height: MediaQuery.of(context).size.width/3,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                Container(
+                  color: Colors.yellow,
+                  width: MediaQuery.of(context).size.width/3,
+                  height: MediaQuery.of(context).size.width/3,
+                ),
+                Container(
+                  color: Colors.teal,
+                  width: MediaQuery.of(context).size.width/3,
+                  height: MediaQuery.of(context).size.width/3,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

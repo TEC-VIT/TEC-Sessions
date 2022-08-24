@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+
+class MobileHome extends StatelessWidget {
+  const MobileHome({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('Mobile View'),
+      ),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                color: Colors.red,
+                width: MediaQuery.of(context).size.width/3,
+                height: MediaQuery.of(context).size.width/3,
+              ),
+              Container(
+                color: Colors.purple,
+                width: MediaQuery.of(context).size.width/3,
+                height: MediaQuery.of(context).size.width/3,
+              ),
+              Container(
+                color: Colors.yellow,
+                width: MediaQuery.of(context).size.width/3,
+                height: MediaQuery.of(context).size.width/3,
+              ),
+              Container(
+                color: Colors.teal,
+                width: MediaQuery.of(context).size.width/3,
+                height: MediaQuery.of(context).size.width/3,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

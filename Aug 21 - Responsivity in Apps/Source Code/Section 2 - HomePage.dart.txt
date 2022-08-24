@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+import 'package:responsivitysession2/HomeTypes/MobileHome.dart';
+import 'package:responsivitysession2/HomeTypes/TabletHome.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context,constraints){
+        if(constraints.maxWidth<=600){
+          return const MobileHome();
+        }
+        else{
+          return const TabletHome();
+        }
+      },
+    );
+  }
+}
